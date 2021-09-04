@@ -319,7 +319,7 @@
             <p>SMS will be sent to this number</p>
         </div>
     </div><br>
-    <center> <button id="reset" onclick="next()" style="width:max-content;"><a href="frst.html">Next</a></button>
+    <center> <button id="reset" onclick="next()" style="width:15%;">Next</button>
         <script>
             function next()
 {
@@ -330,11 +330,14 @@
     fieldname = fields[i];
     if (document.forms["adultform"][fieldname].value === "") {
       alert(fieldname + " can not be empty");
-      return false;
+      return true;
     }
-  }
-  alert('Details updates successfilly')
-  return true;
+    else{
+        alert('Details updates successfilly')
+        window.location.href = "last.html";
+    }
+    return true; 
+ }  
 }
         </script>
         <br>
